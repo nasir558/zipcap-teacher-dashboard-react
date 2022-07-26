@@ -1,0 +1,287 @@
+.createNewCourse {
+    .text26px{
+        font-size: 26px;
+    }
+    .wizardPagination {
+        .numbers {
+            position: relative;
+
+            span {
+                width: 22px;
+                height: 22px;
+                background-color: $white;
+                border: thin solid $red2;
+                font-size: 13px;
+                padding-top: 2px;
+                margin-bottom: 20px;
+
+                @media (min-width: $md) {
+                    margin-bottom: 0;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        height: 0.4px;
+                        width: 100%;
+                        background-color: #066666;
+                        left: calc(50% + 11px);
+                        top: 11px;
+                    }
+                }
+
+            }
+
+        }
+
+        .pagDiv:last-child {
+            .numbers {
+                span {
+                    &::after {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        .active {
+            color: $red2;
+
+            .numbers {
+                span {
+                    background-color: $red2;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    
+
+    .formWizardTitlt {
+        color: #0F0E2D;
+    }
+
+    input:not([type=checkbox]):not([type=radio]),
+    select,
+    textarea {
+        border: thin solid rgba($color: $grey2, $alpha: 0.5);
+        color: #0F0E2D;
+
+        &:focus {
+            border-color: $red2;
+        }
+         &:disabled {
+            background-color: $lightGreen;
+        }
+    }
+
+    select,
+    .react-datepicker-wrapper input {
+        -moz-appearance: none;
+        /* Firefox */
+        -webkit-appearance: none;
+        /* Safari and Chrome */
+        appearance: none;
+        background-image: url(../images/down-arrow.png);
+        background-position: calc(100% - 18px) center;
+        background-size: 14px;
+        background-repeat: no-repeat;
+    }
+    .react-datepicker-wrapper input{
+        background-image: url(../images/calendar-icon-darkgrey.png);
+    }
+    .react-datepicker__month-container{
+        select.react-datepicker__month-select,
+        select.react-datepicker__year-select{
+          height: 30px !important;
+          padding-left: 20px;
+          padding-right: 20px;
+          background-image: none;
+        }
+      }
+    textarea {
+        height: 200px;
+    }
+
+    .sun-editor {
+        border: thin solid rgba($color: $grey2, $alpha: 0.5);
+        color: #0F0E2D;
+        border-radius: 6px;
+        overflow: hidden;
+
+        &:focus {
+            border-color: $red2;
+        }
+        ._se_command_codeView{
+            display: none !important;
+        }
+        .se-toolbar{
+            background: none;
+        }
+        .se-btn-module-border{
+            border: none;
+            border-radius: 0;
+        }
+        button{
+            color: $grey2;
+        }
+        .se-resizing-bar{
+            background: none;
+            border: none;
+        }
+    }
+
+    .react-datepicker-wrapper {
+        width: 100%;
+    }
+
+    .accordion {
+        border: none;
+        border-radius: 0;
+
+        .accordion__item {
+            margin-bottom: 16px;
+
+            .accordion__button {
+                background-color: $white;
+                border: thin solid rgba($color: $grey2, $alpha: 0.5);
+                padding: 13px 22px;
+                position: relative;
+
+                &::before {
+                    display: none !important;
+                }
+
+                .dropdownArrow {
+                    margin-left: auto;
+                }
+            }
+
+            .accordion__button[aria-expanded="true"] {
+                .dropdownArrow {
+                    img {
+                        -ms-transform: rotate(180deg);
+                        /* IE 9 */
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .accordion__panel {
+                border: thin solid rgba($color: $grey2, $alpha: 0.5);
+                border-top: none;
+                font-size: 14px;
+            }
+        }
+    }
+    .examsAccordion{
+        .accordion__button {
+            background-color: #FBFBFB !important;
+            border-radius: 5px;
+        }
+        .accordion__panel {
+            border-radius: 0 0 5px 5px;
+        }
+        .accordion__button[aria-expanded="true"] {
+          border-radius: 5px 5px 0 0;
+        }
+    }
+    .react-tabs {
+        .react-tabs__tab-list {
+            border: none !important;
+
+            li.react-tabs__tab {
+                font-size: 14px;
+                color: $grey2;
+                border: none !important;
+                padding: 0 !important;
+                margin-right: 99px;
+                margin-bottom: 15px;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 100px;
+                    background: $white;
+                    margin-right: 15px;
+                    float: left;
+                    margin-top: -5px;
+                    background-image: url(../images/radio_button-not-selected.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+
+            li.react-tabs__tab--selected {
+                background: none;
+                border-radius: 0;
+                box-shadow: none;
+                &::before {
+                    background-image: url(../images/radio-selected.png);
+                }
+            }
+        }
+    }
+    .customRadio{
+        i{
+            background-image: url(../images/radio_button-not-selected.png);
+        }
+    }
+}
+.formGreybg {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+}
+.uploadFile {
+    background-color: $lightGreen;
+    padding: 15px;
+    color: $grey2;
+    font-size: 14px;
+    position: relative;
+    height: 46px;
+    width: 100%;
+    max-width: 401px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    input {
+        display: none;
+    }
+
+    span.icon {
+        z-index: 1;
+        width: 69px;
+        height: 46px;
+        display: block;
+        position: absolute;
+        text-align: center;
+        background-image: url(../images/plus.png);
+        right: 0;
+        top: 0;
+        background-size: 22px;
+        background-color: $red2;
+        background-position: center center;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        text-align: center;
+
+        &:before,
+        &:after {
+            box-sizing: border-box;
+        }
+    }
+}
+.editForm{
+    .examsAccordion{
+        .accordion__button[aria-expanded="true"],
+        .accordion__panel[aria-hidden="false"] {
+            border: none;
+          }
+          
+    }
+}

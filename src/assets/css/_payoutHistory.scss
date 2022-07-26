@@ -1,0 +1,25 @@
+.payOutHistory{
+    .historyDataTable{
+        table{
+            tbody{
+                tr{
+                  box-shadow: none;
+                  border-radius: 0;
+                  overflow: hidden;
+                  background-color: $lightGreen2;
+                  td {
+                      text-align: center;
+                  
+                  }
+                  td{
+                    padding:18px;
+                    line-height: 20px;
+                  }
+                  td:first-child{
+                      text-align: center;
+                  }
+                }
+            }
+        }
+    }
+}

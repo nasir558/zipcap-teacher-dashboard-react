@@ -1,0 +1,114 @@
+.examinations {
+    .react-tabs__tab {
+        color: $grey2;
+        font-size: 16px;
+        font-weight: 500;
+        bottom: 0;
+        padding: 10px;
+
+        @media (min-width: $lg) {
+            margin-right: 11%;
+            padding: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &:focus {
+            box-shadow: none;
+            background: transparent;
+            border: none;
+        }
+
+        &:focus::after {
+            background-color: transparent;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    .react-tabs__tab-list {
+        border-bottom: thin solid $grey2;
+    }
+
+    .react-tabs__tab--selected {
+        color: $red2;
+        position: relative;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+
+        &::after,
+        &:focus::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            background-color: $red2;
+        }
+    }
+
+    .react-tabs__tab-panel {
+        margin-top: 20px;
+
+        @media (min-width: $lg) {
+            margin-top: 0;
+        }
+
+
+    }
+
+    .filterSearch {
+        select {
+            width: 100%;
+        }
+
+        input {
+            border: none;
+        }
+    }
+
+}
+
+.modalBody {
+    border: thin solid $courseNavigationColor;
+
+    .answerBg {
+        background-color: #F8F8F8;
+
+        p {
+            margin-bottom: 35px;
+        }
+
+       
+    }
+  form{
+    input:not([type=checkbox]):not([type=radio]),
+    select,
+    textarea {
+        border: thin solid rgba($color: $grey2, $alpha: 0.5);
+        color: #0F0E2D;
+
+        &:focus {
+            border-color: $red2;
+        }
+    }
+    a{
+        color: $blue;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+  }
+}

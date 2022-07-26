@@ -1,0 +1,85 @@
+.studentDashboard {
+    .leftNavigationContainer {
+        background-color: $dashboardBlack;
+
+        .navigationItems {
+            padding-bottom: 50px;
+
+            .navTitle {
+                color: $white;
+                font-size: 20px;
+                margin-top: 50px;
+                margin-bottom: 35px;
+            }
+
+            ul {
+                li {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+
+                    a {
+                        padding: 12px 12px 12px 41px;
+                        text-align: center;
+                        color: $white;
+                        font-size: 14px;
+                        border-radius: 29px;
+
+                        span.icon {
+                            width: 22px;
+
+                            img {
+                                width: auto;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    a.active,
+                    a:hover {
+                        background-color: $white;
+                        color: $black;
+
+                        img {
+                            filter: invert(100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+.titleDashboard {
+    color: $darkGrey;
+}
+.studentDashboardSection {
+    background-image: url(../images/redDots.png), url(../images/greyDots.png);
+    background-position: 0 calc(100% - 152px), right 67px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 68px 110px, 68px 110px;
+}
+.counts{
+    .countItem{
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
+        .redText{
+            color: $red2;
+        }
+        .orangeText{
+            color: $orange2
+        }
+        .yellowText{
+            color: $yellow2;
+        }
+        &:hover{
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+    }
+   
+}
+@import "./allCourses";
+@import "./newCourse";
+@import "./payoutHistory";
+@import "./discussions";
+@import "./notifications";
+@import "./account";

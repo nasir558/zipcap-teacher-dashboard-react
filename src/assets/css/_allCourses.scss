@@ -1,0 +1,88 @@
+.searchForm{
+    input{
+        height: 45px;
+        background-color: #F2FAFF;
+        color: $grey2;
+        border-radius: 5px 0 0 5px;
+        border: thin solid transparent;
+        border-right: none;
+        &:focus{
+            background-color: $white;
+            border-color: $red2;
+        }
+    }
+    button{
+        border-radius: 0 5px 5px 0;
+        text-align: center;
+    }
+    .boxShadow{
+        box-shadow: 0 1px 1px rgba($color: #000000, $alpha: 0.16);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
+.Courses,
+.AnalyticsDataTable{    
+    .tableHeader{
+        color: #0F0E2D;
+    }
+    table {
+        display: table;
+        border-spacing:0px 20px;
+        border-collapse: separate;
+        width: 100%;
+      }
+      
+      tbody{
+          tr{
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+            -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+            border-radius: 5px;
+            overflow: hidden;
+            td {
+                text-align: center;
+            
+            }
+            td{
+              padding:18px;
+              line-height: 20px;
+            }
+            td:first-child{
+                text-align: left;
+                a{
+                    color: $blue;
+                    &:hover{
+                        color: $red2;
+                    }
+                }
+            }
+          }
+      }
+     
+      .responsiveTable tbody tr{
+          border: none;
+          padding: 0;
+          margin-bottom: 20px;
+          td{
+              .tdBefore{
+                  color: $black;
+              }
+          }
+      }
+      .pubishLink{
+        color: $blue;
+      }
+      .deleteLink{
+        color: $red2;
+      }
+      .pubishLink,
+      .deleteLink{
+          &:hover{
+              color: $black;
+          }
+      }
+      
+}
+.warningText{
+    color: $red2;
+}
